@@ -1,0 +1,6 @@
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-RESTful
+python-dotenv
+psycopg2-binary
