@@ -1,0 +1,16 @@
+{
+  "id": "lateshow-env",
+  "name": "Late Show API Local",
+  "values": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000",
+      "type": "default"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "secret"
+    }
+  ]
+}

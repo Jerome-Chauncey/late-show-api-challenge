@@ -15,10 +15,12 @@ app = Flask(__name__)
 class Config:
     SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY')
 
 
 app.config.from_object(Config)
 app.json.compact = False
+
 
 metadata = MetaData(
     naming_convention={

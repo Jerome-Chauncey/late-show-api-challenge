@@ -8,6 +8,13 @@ class Episode(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.DateTime, default=datetime.utcnow)
     number = db.Column(db.String)
+
+    appearances = db.relationship(
+        'Appearance',
+        back_populates = 'episode',
+        cascade='all, delete-orphan',
+        passive_deletes=True
+    )
     
     
     

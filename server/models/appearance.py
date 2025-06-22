@@ -11,8 +11,8 @@ class Appearance(db.Model, SerializerMixin):
     episode_id = db.Column(db.Integer, db.ForeignKey('episodes.id', ondelete='CASCADE'), nullable=False)
     
  
-    guest = db.relationship('Guest', backref='appearances')
-    episode = db.relationship('Episode', backref='appearances')
+    guest = db.relationship('Guest', back_populates='appearances')
+    episode = db.relationship('Episode', back_populates='appearances')
     
     @validates('rating')
     def validate_rating(self, key, rating):
