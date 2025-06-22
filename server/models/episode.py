@@ -10,3 +10,5 @@ class Episode(db.Model, SerializerMixin):
     number = db.Column(db.String)
 
     appearances = db.relationship('Appearance', backref='episode', cascade='all, delete')
+
+    serialize_rules = ('-appearances.episode',)
